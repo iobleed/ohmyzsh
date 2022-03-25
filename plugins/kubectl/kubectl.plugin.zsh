@@ -186,6 +186,12 @@ alias kej='kubectl edit job'
 alias kdj='kubectl describe job'
 alias kdelj='kubectl delete job'
 
+# ResourceQuota management
+alias kgrq='kubectl get resourcequota'
+alias kerq='kubectl edit resourcequota'
+alias kdrq='kubectl describe resourcequota'
+alias kdelrq='kubectl delete resourcequota'
+
 # Only run if the user actually has kubectl installed
 if (( ${+_comps[kubectl]} )); then
   function kj() { kubectl "$@" -o json | jq; }
